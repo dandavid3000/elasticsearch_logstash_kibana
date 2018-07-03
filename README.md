@@ -46,13 +46,13 @@ You must be familiar with Linux commands to follow the guide
 
 * Check all services running on the server by using the command:
 	* get sudo permission `sudo su`
-	* `/opt/binami/ctlscript.sh status` -> Get all services status. It can be replaced by stop/start
+	* `/opt/bitnami/ctlscript.sh status` -> Get all services status. It can be replaced by stop/start
 	
 * It's neccessary to stop Logstash service before configuring anything.
-	* Do `/opt/binami/ctlscript.sh stop logstash`
+	* Do `/opt/bitnami/ctlscript.sh stop logstash`
 	* Recheck again with status command `/opt/bitnami/ctlscript.sh status logstash`
 	
-* All logs files will be stored in `/opt/binami/logstash/logs/`
+* All logs files will be stored in `/opt/bitnami/logstash/logs/`
 	* `logstash.log` stores operation for logstash service (Reset everytime a logstash service starts)
 	* `logstash-plain.log` stores everything relating to logstash.
 	* You have to make sure that when you run logstash. There is no error while running the service.
@@ -67,11 +67,11 @@ You must be familiar with Linux commands to follow the guide
 
 * Install `couchdb_changes`
 ```
-/opt/binami/logstash/bin/logstash-plugin install logstash-input-couchdb_changes
+/opt/bitnami/logstash/bin/logstash-plugin install logstash-input-couchdb_changes
 
 ```
 
-* Modify the configuration for logstash service by opening file `/opt/binami/logstash/config/logstash.yml'
+* Modify the configuration for logstash service by opening file `/opt/bitnami/logstash/config/logstash.yml'
 ```
 # path.config: "/opt/bitnami/logstash/conf/"
 
@@ -81,7 +81,7 @@ You must be familiar with Linux commands to follow the guide
 
 ```
 
-* Open file  `/opt/binami/logstash/conf/logstash.conf'. As default. Logstash gets all records in couchdb so we need to serperate the doc is `deleteced` or `index`. You can read more congifuration for logstash
+* Open file  `/opt/bitnami/logstash/conf/logstash.conf'. As default. Logstash gets all records in couchdb so we need to serperate the doc is `deleteced` or `index`. You can read more congifuration for logstash
 
 ```
 input { 
