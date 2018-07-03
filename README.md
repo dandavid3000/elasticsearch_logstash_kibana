@@ -35,7 +35,7 @@ You must be familiar with Linux commands to follow the guide
 	* Put `IP Address` on your terminal tool to login in
 	* WinSCP is convenient for file modification/copy/paste.
 	
-	![Success login](/images/1.PNG "Success Login")
+	![Success login](/img/1.PNG "Success Login")
 	
 ## Logstash Configuration
 
@@ -142,8 +142,7 @@ curl -XPUT 'localhost:9200/your_index/_settings' -H 'Content-Type: application/j
 
 * If you're doing it correctly. You will see `docs.count` increasing time by time by using the command `curl 'localhost:9200/_cat/indices?v'
 
-* Open Kibana, and you should see your index in `Management` create indexes from it to finish and then you're able to search what you need in Kibana
-
+* You'd see your index in `Management` in `Kibana`. Create indexes from it to finish and then you're able to search what you need
 
 ## FAQ
 
@@ -159,6 +158,6 @@ curl -XPUT 'localhost:9200/your_index/_settings' -H 'Content-Type: application/j
 
 This guide is a simple one to help you understand the big picture and quickly connect those services. You may need to take a look at logstash structure and configuration on their website for deep configuration and versatile setting.
 
-![Success index import](/images/2.png "Success index import")
+![Success index import](/img/2.png "Success index import")
 
 
