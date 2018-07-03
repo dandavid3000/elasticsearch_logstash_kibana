@@ -1,7 +1,16 @@
 >  This guide is built in order to help people have less headache in configuration for logstash, elastic search, and kibana.
 > couchdb -> logstash -> elasticsearch -> kibana
 
-#Introduction
+## Table of contents
+* [Introduction](#introduction)
+* [Installation](#installation)
+* [Logstash Configuration](#logstash-configuration)
+* [FAQ](#faq)
+* [Conclusion](#conclusion)
+
+
+## Introduction
+
 I'm not going to focus on how to install `Logstash`, `Elasticsearch`, `Kibana` as well as `couchdb`.
 `Logstash` is used to get data from `couchdb` continuously. The data then is sent to `ElasticSearch` and viewed on `Kibana`.
 
@@ -14,11 +23,7 @@ All services include:
 
 You must be familiar with Linux commands to follow the guide
 
-## Table of contents
-* [Installation](#installation)
-* [Logstash Configuration](#logstash-configuration)
-* [FAQ](#faq)
-* [Conclusion](#conclusion)
+
 
 ## Installation
 * Login to your bitnami account at `https://app.bitnamihosting.com`
