@@ -81,7 +81,7 @@ You must be familiar with Linux commands to follow the guide
 
 ```
 
-* Open file  `/opt/bitnami/logstash/conf/logstash.conf'. As default. Logstash gets all records in couchdb so we need to serperate the doc is `deleteced` or `index`. You can read more congifuration for logstash
+* Open file  `/opt/bitnami/logstash/conf/logstash.conf`. As default. Logstash gets all records in couchdb so we need to serperate the doc is `deleted` or `index`. You can read more congifuration for logstash
 
 ```
 input { 
@@ -145,7 +145,7 @@ curl -XPUT 'localhost:9200/your_index/_settings' -H 'Content-Type: application/j
 	
 * Start logstash service by using `/opt/bitnami/ctlscript.sh start logstash`. Remember to check log files and status again to ensure everything is working OK.
 
-* If you're doing it correctly. You will see `docs.count` increasing time by time by using the command `curl 'localhost:9200/_cat/indices?v'
+* If you're doing it correctly. You will see `docs.count` increasing time by time by using the command `curl 'localhost:9200/_cat/indices?v'`
 
 * You'd see your index in `Management` in `Kibana`. Create indexes from it to finish and then you're able to search what you need
 
