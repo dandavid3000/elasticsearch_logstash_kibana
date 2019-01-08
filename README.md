@@ -165,4 +165,35 @@ This guide is a simple one to help you understand the big picture and quickly co
 
 ![Success index import](/img/2.png "Success index import")
 
+## Examples
+
+Add a new field `communication_error` as boolean values if the value exists
+
+```
+filter {
+  if [@metadata][action] == "delete" {
+      mutate {
+        add_field => { "elastic_action" => "delete" }
+      }
+    } else {
+      mutate {
+        add_field => { "elastic_action" => "index" }
+      }
+    }
+	if [doc][error_communication_error][0][SensorName]{
+		mutate {
+			add_field => { "communication_error" => true}
+		}
+	} else {
+		mutate {
+			add_field => { "communication_error" => false}
+			
+		  }
+	}
+
+	mutate {
+		convert => { "communication_error" => "boolean"}
+	}
+}
+```
 
