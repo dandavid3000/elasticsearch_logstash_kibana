@@ -131,13 +131,13 @@ output {
 ```
 curl -XPUT 'localhost:9200/your_index/_settings' -H 'Content-Type: application/json' -d'
 {
-	"index" : {
-		"mapping" : {
-			"total_fields" : {
-				"limit" : "100000"
-			}
-		}
-	}
+"index" : {
+"mapping" : {
+"total_fields" : {
+"limit" : "100000"
+}
+}
+}
 }'
 ```
 
